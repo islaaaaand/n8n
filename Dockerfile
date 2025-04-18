@@ -8,9 +8,10 @@ ENV DB_POSTGRESDB_DATABASE=postgres
 ENV DB_POSTGRESDB_USER=postgres.nhtiekxfxzcjadwlythm
 ENV DB_POSTGRESDB_PASSWORD=$DB_POSTGRESDB_PASSWORD
 ENV DB_POSTGRESDB_POOL_MODE=session
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
 WORKDIR /home/node
 
 EXPOSE 7860
 
-CMD ["n8n", "start"]
+CMD ["node", "/home/node/.n8n/n8n", "start"]
