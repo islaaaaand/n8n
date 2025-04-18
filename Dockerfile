@@ -14,4 +14,5 @@ WORKDIR /home/node
 
 EXPOSE 7860
 
-CMD ["node", "/home/node/.n8n/n8n", "start"]
+CMD ["/usr/local/bin/n8n", "start"]
+
