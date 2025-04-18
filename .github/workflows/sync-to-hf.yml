@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout GitHub repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 獲取完整歷史，解決 shallow update 問題
       - name: Push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
