@@ -14,5 +14,6 @@ WORKDIR /home/node
 
 EXPOSE 7860
 
-CMD ["/usr/local/bin/n8n", "start"]
+ENTRYPOINT ["tini", "--"]
+CMD ["n8n", "start"]
 
